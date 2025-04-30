@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CitiesAngularApp\**" />
+    <Compile Remove="Controllers\v1\**" />
+    <Compile Remove="DatabaseContext\**" />
+    <Compile Remove="DTO\**" />
+    <Compile Remove="Identity\**" />
+    <Content Remove="CitiesAngularApp\**" />
+    <Content Remove="Controllers\v1\**" />
+    <Content Remove="DatabaseContext\**" />
+    <Content Remove="DTO\**" />
+    <Content Remove="Identity\**" />
+    <EmbeddedResource Remove="CitiesAngularApp\**" />
+    <EmbeddedResource Remove="Controllers\v1\**" />
+    <EmbeddedResource Remove="DatabaseContext\**" />
+    <EmbeddedResource Remove="DTO\**" />
+    <EmbeddedResource Remove="Identity\**" />
+    <None Remove="CitiesAngularApp\**" />
+    <None Remove="Controllers\v1\**" />
+    <None Remove="DatabaseContext\**" />
+    <None Remove="DTO\**" />
+    <None Remove="Identity\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AccountController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="7.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.1.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.2" />
+  </ItemGroup>
+
+</Project>
