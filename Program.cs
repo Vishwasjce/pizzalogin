@@ -158,7 +158,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularClient", policyBuilder =>
     {
         policyBuilder
-            .WithOrigins("https://pizzaorderapi-buh3dvavakbbb7df.canadacentral-01.azurewebsites.net", "http://localhost:4200")
+            .WithOrigins(
+                "https://pizzaorderapi-buh3dvavakbbb7df.canadacentral-01.azurewebsites.net",
+                "http://localhost:4200")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
