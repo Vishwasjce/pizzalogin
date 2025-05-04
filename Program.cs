@@ -160,7 +160,7 @@ builder.Services.AddCors(options =>
         policyBuilder
             .WithOrigins(
                 "https://pizzaorderapi-buh3dvavakbbb7df.canadacentral-01.azurewebsites.net",
-                "http://localhost:4200")
+                "http://localhost:4200","http://localhost:5200")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
