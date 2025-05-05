@@ -230,10 +230,10 @@ namespace Login.Controllers
         [HttpPost("register")] // Ensure the route matches the curl request
         public async Task<IActionResult> RegisterUser([FromBody] Users userModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             // Check if the username or email already exists
             var existingUser = await _context.users
