@@ -212,6 +212,7 @@ app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "1.0");
     options.SwaggerEndpoint("/swagger/v2/swagger.json", "2.0");
+    options.RoutePrefix = string.Empty;
 });
 
 app.UseRouting();
