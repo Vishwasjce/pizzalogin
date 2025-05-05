@@ -158,13 +158,18 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularClient", policyBuilder =>
     {
         policyBuilder
-            .WithOrigins("https://pizzaorderclient-b2ddeaduhfcvereu.canadacentral-01.azurewebsites.net", "http://localhost:4200")
+            .WithOrigins("https://pizzaorderapi-buh3dvavakbbb7df.canadacentral-01.azurewebsites.net")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
-
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 //Configure Authentication
 builder.Services.AddAuthentication(options =>
 {
